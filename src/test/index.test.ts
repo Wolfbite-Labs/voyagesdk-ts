@@ -1,12 +1,11 @@
 import {describe, expect, it} from 'bun:test'
-import {treaty} from "@elysiajs/eden";
-import {Packbase} from "@/routes";
+import VoyageSDK from "../index";
 
-const app = treaty<Packbase>(process.env.YAPOCK_API_URL || 'https://shrew.api.packabse.app');
+const {vg} = new VoyageSDK(process.env.YAPOCK_API_URL)
 
 describe('Yapock', () => {
     it('should correctly describe itself', async () => {
-        const {data} = await app.server.describeServer.get()
+        const {data} = await vg.server.describeServer.get()
 
         expect(data).toContainKey('availableUserDomains')
     })
@@ -14,10 +13,8 @@ describe('Yapock', () => {
 
 describe('User', () => {
     it('should find the user "rek"', async () => {
-        const {data} = await app.user({username: 'rek'}).get()
-
-        app.user.me.get()
-
+        const {data} = await vg.user({username: 'rek'}).get()
+        
         expect(data).toBeObject()
     })
 })

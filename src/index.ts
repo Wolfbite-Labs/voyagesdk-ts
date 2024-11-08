@@ -2,9 +2,9 @@ import {Treaty, treaty} from "@elysiajs/eden";
 import {Packbase} from "@/routes";
 
 export default class VoyageSDK {
-    public app: Treaty.Create<Packbase>;
+    public vg: Treaty.Create<Packbase>;
 
-    constructor(baseUrl: string) {
-        this.app = treaty<Packbase>(baseUrl);
+    constructor(baseUrl: string = 'https://shrew.api.packbase.app') {
+        this.vg = treaty<Packbase>(baseUrl);
     }
 }
