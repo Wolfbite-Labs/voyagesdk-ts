@@ -1,0 +1,13 @@
+import type { ElysiaWithBaseUrl } from "elysia-autoload";
+import type Route0 from "./routes/user/me";
+import type Route1 from "./routes/server/describeServer";
+import type Route2 from "./routes/packs/index";
+import type Route3 from "./routes/pack/create";
+import type Route4 from "./routes/howl/create";
+import type Route5 from "./routes/user/[username]";
+import type Route6 from "./routes/pack/[id]/index";
+import type Route7 from "./routes/pack/[id]/join";
+import type Route8 from "./routes/howl/[id]/index";
+import type Route9 from "./routes/howl/[id]/react";
+import type Route10 from "./routes/feed/[id]/index";
+export type Packbase = ElysiaWithBaseUrl<"/user/me", typeof Route0> & ElysiaWithBaseUrl<"/server/describeServer", typeof Route1> & ElysiaWithBaseUrl<"/packs", typeof Route2> & ElysiaWithBaseUrl<"/pack/create", typeof Route3> & ElysiaWithBaseUrl<"/howl/create", typeof Route4> & ElysiaWithBaseUrl<"/user/:username", typeof Route5> & ElysiaWithBaseUrl<"/pack/:id", typeof Route6> & ElysiaWithBaseUrl<"/pack/:id/join", typeof Route7> & ElysiaWithBaseUrl<"/howl/:id", typeof Route8> & ElysiaWithBaseUrl<"/howl/:id/react", typeof Route9> & ElysiaWithBaseUrl<"/feed/:id", typeof Route10>;
