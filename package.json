@@ -32,14 +32,17 @@
   },
   "bugs": "https://github.com/Wolfbite-Labs/voyagesdk-ts/issues",
   "author": "Wildbase",
-  "devDependencies": {
+  "dependencies": {
     "@elysiajs/eden": "^1.1.3",
+    "@supabase/supabase-js": "^2.46.1",
+    "elysia": "^1.1.24",
+    "elysia-autoload": "^1.4.0"
+  },
+  "devDependencies": {
     "@types/bun": "latest",
     "axios": "^1.7.7",
-    "bun-plugin-dts": "^0.3.0",
-    "elysia": "^1.1.24",
-    "elysia-autoload": "^1.4.0",
     "github-directory-downloader": "^1.3.6",
+    "bun-plugin-dts": "^0.3.0",
     "octokit": "^4.0.2"
   },
   "peerDependencies": {

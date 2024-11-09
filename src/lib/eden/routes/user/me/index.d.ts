@@ -56,7 +56,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
 }, {
     derive: {};
     resolve: {
-        readonly user: import("jose").JWTVerifyResult<import("jose").JWTPayload> | undefined;
+        [x: string]: any;
     };
     schema: {};
 }>;

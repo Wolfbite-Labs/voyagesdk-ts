@@ -1,4 +1,5 @@
-import { YapockType } from "@/index";
+import {YapockType} from "@/index";
+
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -30,9 +31,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }, {
     derive: {};
-    resolve: {
-        readonly user: import("jose").JWTVerifyResult<import("jose").JWTPayload> | undefined;
-    };
+    resolve: {};
     schema: {};
 }>;
 export default _default;

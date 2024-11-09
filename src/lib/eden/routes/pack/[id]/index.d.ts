@@ -1,4 +1,5 @@
-import { YapockType } from "@/index";
+import {YapockType} from "@/index";
+
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -16,7 +17,9 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
         get: {
             body: unknown;
             params: {};
-            query: unknown;
+            query: {
+                scope?: string | undefined;
+            } | undefined;
             headers: unknown;
             response: {
                 [x: string]: any;
@@ -30,11 +33,11 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }, {
     derive: {};
-    resolve: {
-        readonly user: import("jose").JWTVerifyResult<import("jose").JWTPayload> | undefined;
-    };
+    resolve: {};
     schema: {};
 }>;
 export default _default;
+
 export declare function getPack(id: string, scope?: string): Promise<any>;
+
 export declare function getPackMembership(packId: string, userId: string): Promise<any>;

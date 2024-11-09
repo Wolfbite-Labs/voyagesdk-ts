@@ -21,7 +21,7 @@ declare const Yapock: Elysia<"", false, {
 }, {
     derive: {};
     resolve: {
-        readonly user: import("jose").JWTVerifyResult<import("jose").JWTPayload> | undefined;
+        [x: string]: any;
     };
     schema: {};
 }>;

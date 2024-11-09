@@ -1,4 +1,5 @@
-import { YapockType } from "@/index";
+import {YapockType} from "@/index";
+
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -30,16 +31,15 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }, {
     derive: {};
-    resolve: {
-        readonly user: import("jose").JWTVerifyResult<import("jose").JWTPayload> | undefined;
-    };
+    resolve: {};
     schema: {};
 }>;
 export default _default;
+
 export declare function Routes(): {
     method: string;
     protected: boolean;
-    handler: ({ id, scope }: {
+    handler: ({id, scope}: {
         id: string;
         scope?: string;
     }, set: {
