@@ -1,5 +1,4 @@
-import {YapockType} from "@/index";
-
+import { YapockType } from "@/index";
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -48,14 +47,17 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }, {
     derive: {};
-    resolve: {};
+    resolve: {
+        [x: string]: any;
+    };
     schema: {};
 }>;
 export default _default;
-
-export declare function reactTo({body: {id, slot}, set, user}: {
-    body: {
+export declare function reactTo({ params: { id }, body: { slot }, set, user }: {
+    params: {
         id: string;
+    };
+    body: {
         slot: number;
     };
     set: {
@@ -65,10 +67,11 @@ export declare function reactTo({body: {id, slot}, set, user}: {
         sub: string;
     };
 }): Promise<void | 401>;
-
-export declare function deleteReactFrom({body: {id, slot}, set, user}: {
-    body: {
+export declare function deleteReactFrom({ params: { id }, body: { slot }, set, user }: {
+    params: {
         id: string;
+    };
+    body: {
         slot: number;
     };
     set: {

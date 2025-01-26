@@ -1,9 +1,7 @@
-import {YapockType} from "@/index";
-
+import { YapockType } from "@/index";
 export declare function Describe(): {
     xrpc: boolean;
 };
-
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -35,7 +33,9 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }, {
     derive: {};
-    resolve: {};
+    resolve: {
+        [x: string]: any;
+    };
     schema: {};
 }>;
 export default _default;

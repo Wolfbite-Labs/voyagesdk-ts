@@ -28,13 +28,15 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     index: {
         post: {
             body: {
+                slug?: string | undefined;
                 username?: string | undefined;
                 display_name?: string | undefined;
                 about?: {
                     bio?: string | undefined;
                     flair?: string | undefined;
                 } | undefined;
-                slug?: string | undefined;
+                space_type?: "default" | "custom_free" | "custom_unrestricted" | undefined;
+                post_privacy?: "everyone" | "followers" | "friends" | "private" | undefined;
                 images?: {
                     avatar?: any;
                     header?: any;
@@ -62,9 +64,9 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
 }>;
 export default _default;
 interface Update {
-    username: string;
-    display_name: string;
-    slug: string;
+    username?: string;
+    display_name?: string;
+    slug?: string;
     about?: {
         bio?: string;
     };
@@ -72,8 +74,10 @@ interface Update {
         avatar?: string;
         header?: string;
     };
+    space_type?: "default" | "custom_free" | "custom_unrestricted";
+    post_privacy?: "public" | "followers" | "friends" | "private";
 }
-export declare function updateUser({ username, display_name, slug, about, images }: Update, set: any, currentUser: {
+export declare function updateUser({ username, display_name, slug, space_type, post_privacy, about, images }: Update, set: any, currentUser: {
     sub: any;
 }): Promise<Update & {
     bio?: string;

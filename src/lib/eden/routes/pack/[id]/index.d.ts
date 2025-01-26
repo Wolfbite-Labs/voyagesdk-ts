@@ -1,5 +1,4 @@
-import {YapockType} from "@/index";
-
+import { YapockType } from "@/index";
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -19,7 +18,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             params: {};
             query: {
                 scope?: string | undefined;
-            } | undefined;
+            };
             headers: unknown;
             response: {
                 [x: string]: any;
@@ -33,11 +32,11 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }, {
     derive: {};
-    resolve: {};
+    resolve: {
+        [x: string]: any;
+    };
     schema: {};
 }>;
 export default _default;
-
-export declare function getPack(id: string, scope?: string): Promise<any>;
-
+export declare function getPack(id: string, scope?: string, userId?: string): Promise<any>;
 export declare function getPackMembership(packId: string, userId: string): Promise<any>;

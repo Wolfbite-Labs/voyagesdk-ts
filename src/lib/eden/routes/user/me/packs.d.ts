@@ -43,6 +43,4 @@ export declare function getUserPacks({ user, set }: {
     set: {
         status: number;
     };
-}): Promise<void | {
-    tenant_id: any;
-}[]>;
+}): Promise<void | any[]>;

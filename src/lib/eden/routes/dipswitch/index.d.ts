@@ -15,10 +15,22 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     index: {
         post: {
             body: {
-                description?: string | undefined;
-                slug: string;
-                display_name: string;
+                dpk: string;
+                dpv: string;
             };
+            params: {};
+            query: unknown;
+            headers: unknown;
+            response: {
+                [x: string]: any;
+                200: any;
+            };
+        };
+    };
+} & {
+    index: {
+        get: {
+            body: unknown;
             params: {};
             query: unknown;
             headers: unknown;
