@@ -30,7 +30,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             body: {
                 slug?: string | undefined;
                 username?: string | undefined;
-                display_name?: string | undefined;
+                display_name?: string | null | undefined;
                 about?: {
                     bio?: string | undefined;
                     flair?: string | undefined;

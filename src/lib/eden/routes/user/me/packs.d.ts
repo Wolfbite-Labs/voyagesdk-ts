@@ -1,4 +1,4 @@
-import { YapockType } from "@/index";
+import { YapockType } from '@/index';
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -43,4 +43,4 @@ export declare function getUserPacks({ user, set }: {
     set: {
         status: number;
     };
-}): Promise<void | any[]>;
+}): Promise<any[] | import("@supabase/postgrest-js").PostgrestError>;

@@ -66,7 +66,16 @@ export declare function reactTo({ params: { id }, body: { slot }, set, user }: {
     user: {
         sub: string;
     };
-}): Promise<void | 401>;
+}): Promise<401 | {
+    cause?: string;
+    code?: string;
+    name?: string;
+    message?: string;
+    detail?: any;
+    value?: {
+        summary: string;
+    };
+} | undefined>;
 export declare function deleteReactFrom({ params: { id }, body: { slot }, set, user }: {
     params: {
         id: string;
@@ -80,4 +89,13 @@ export declare function deleteReactFrom({ params: { id }, body: { slot }, set, u
     user: {
         sub: string;
     };
-}): Promise<void | 401>;
+}): Promise<401 | {
+    cause?: string;
+    code?: string;
+    name?: string;
+    message?: string;
+    detail?: any;
+    value?: {
+        summary: string;
+    };
+} | undefined>;
