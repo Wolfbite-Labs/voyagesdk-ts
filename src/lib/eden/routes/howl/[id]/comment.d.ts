@@ -13,12 +13,12 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     macroFn: {};
 }, {
     index: {
-        get: {
-            body: unknown;
-            params: {};
-            query: {
-                scope?: string | undefined;
+        post: {
+            body: {
+                body: string;
             };
+            params: {};
+            query: unknown;
             headers: unknown;
             response: {
                 [x: string]: any;
@@ -38,5 +38,3 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }>;
 export default _default;
-export declare function getPack(id: string, scope?: string, userId?: string): Promise<any>;
-export declare function getPackMembership(packId: string, userId: string): Promise<any>;
