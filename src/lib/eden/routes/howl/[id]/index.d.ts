@@ -67,7 +67,7 @@ export declare function deletePost({ params: { id }, set, user }: {
     user: {
         sub: string;
     };
-}): Promise<401 | {
+}): Promise<{
     cause?: string;
     code?: string;
     name?: string;

@@ -1,4 +1,4 @@
-import { YapockType } from "@/index";
+import { YapockType } from '@/index';
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -41,6 +41,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
                     avatar?: any;
                     header?: any;
                 } | undefined;
+                invite_code?: string | undefined;
             };
             params: {};
             query: unknown;
@@ -74,8 +75,8 @@ interface Update {
         avatar?: string;
         header?: string;
     };
-    space_type?: "default" | "custom_free" | "custom_unrestricted";
-    post_privacy?: "public" | "followers" | "friends" | "private";
+    space_type?: 'default' | 'custom_free' | 'custom_unrestricted';
+    post_privacy?: 'public' | 'followers' | 'friends' | 'private';
 }
 export declare function updateUser({ username, display_name, slug, space_type, post_privacy, about, images }: Update, set: any, currentUser: {
     sub: any;

@@ -1,4 +1,4 @@
-import { YapockType } from "@/index";
+import { YapockType } from '@/index';
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};

@@ -1,4 +1,4 @@
-import { YapockType } from "@/index";
+import { YapockType } from '@/index';
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -52,3 +52,13 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }>;
 export default _default;
+export declare function getDPObject(userID: string): Promise<{
+    json: {
+        dp: {
+            [key: string]: any;
+        };
+    };
+    dp: {
+        [key: string]: any;
+    };
+}>;

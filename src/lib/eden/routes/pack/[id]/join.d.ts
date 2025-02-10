@@ -1,4 +1,4 @@
-import { YapockType } from "@/index";
+import { YapockType } from '@/index';
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -14,6 +14,19 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
 }, {
     index: {
         post: {
+            body: unknown;
+            params: {};
+            query: unknown;
+            headers: unknown;
+            response: {
+                [x: string]: any;
+                200: any;
+            };
+        };
+    };
+} & {
+    index: {
+        delete: {
             body: unknown;
             params: {};
             query: unknown;

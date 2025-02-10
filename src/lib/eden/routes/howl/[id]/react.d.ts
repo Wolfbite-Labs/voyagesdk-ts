@@ -1,4 +1,4 @@
-import { YapockType } from "@/index";
+import { YapockType } from '@/index';
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
@@ -66,7 +66,7 @@ export declare function reactTo({ params: { id }, body: { slot }, set, user }: {
     user: {
         sub: string;
     };
-}): Promise<401 | {
+}): Promise<{
     cause?: string;
     code?: string;
     name?: string;
@@ -89,7 +89,7 @@ export declare function deleteReactFrom({ params: { id }, body: { slot }, set, u
     user: {
         sub: string;
     };
-}): Promise<401 | {
+}): Promise<{
     cause?: string;
     code?: string;
     name?: string;
