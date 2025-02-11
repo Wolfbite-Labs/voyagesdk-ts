@@ -28,13 +28,13 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     index: {
         post: {
             body: {
-                slug?: string | undefined;
                 username?: string | undefined;
                 display_name?: string | null | undefined;
                 about?: {
                     bio?: string | undefined;
                     flair?: string | undefined;
                 } | undefined;
+                slug?: string | undefined;
                 space_type?: "default" | "custom_free" | "custom_unrestricted" | undefined;
                 post_privacy?: "everyone" | "followers" | "friends" | "private" | undefined;
                 images?: {

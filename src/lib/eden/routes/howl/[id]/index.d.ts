@@ -67,13 +67,4 @@ export declare function deletePost({ params: { id }, set, user }: {
     user: {
         sub: string;
     };
-}): Promise<{
-    cause?: string;
-    code?: string;
-    name?: string;
-    message?: string;
-    detail?: any;
-    value?: {
-        summary: string;
-    };
-} | undefined>;
+}): Promise<void>;
