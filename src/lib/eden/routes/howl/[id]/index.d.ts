@@ -56,7 +56,7 @@ export declare function getPost({ params: { id }, set }: {
     set: {
         status: number;
     };
-}): Promise<any>;
+}, post?: any): Promise<any>;
 export declare function deletePost({ params: { id }, set, user }: {
     params: {
         id: string;
