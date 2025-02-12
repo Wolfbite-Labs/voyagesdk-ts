@@ -13,16 +13,8 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     macroFn: {};
 }, {
     index: {
-        post: {
-            body: {
-                display_name?: string | undefined;
-                slug?: string | undefined;
-                images?: {
-                    avatar?: any;
-                    header?: any;
-                } | undefined;
-                description?: string | undefined;
-            };
+        get: {
+            body: unknown;
             params: {};
             query: unknown;
             headers: unknown;
