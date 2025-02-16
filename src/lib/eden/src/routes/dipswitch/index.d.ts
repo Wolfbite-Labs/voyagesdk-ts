@@ -13,14 +13,34 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     macroFn: {};
 }, {
     index: {
-        get: {
-            body: unknown;
+        post: {
+            body: {
+                dpk: string;
+                dpv: string;
+            };
             params: {};
             query: unknown;
             headers: unknown;
             response: {
                 [x: string]: any;
                 200: any;
+                500: any;
+            };
+        };
+    };
+} & {
+    index: {
+        get: {
+            body: unknown;
+            params: {};
+            query: {
+                dpk?: string | undefined;
+            };
+            headers: unknown;
+            response: {
+                [x: string]: any;
+                200: any;
+                readonly 404: any;
             };
         };
     };
@@ -36,11 +56,13 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }>;
 export default _default;
-export declare function getUserAPI({ by, value, }: {
-    by: string;
-    value: string;
-}, set: any): Promise<any>;
-export declare function getUser({ by, value }: {
-    by: string;
-    value: string;
-}): Promise<any>;
+export declare function getDPObject(userID: string): Promise<{
+    json: {
+        dp: {
+            [key: string]: any;
+        };
+    };
+    dp: {
+        [key: string]: any;
+    };
+}>;

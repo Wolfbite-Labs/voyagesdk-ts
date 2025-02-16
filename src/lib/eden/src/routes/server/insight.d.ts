@@ -36,11 +36,3 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }>;
 export default _default;
-export declare function getUserAPI({ by, value, }: {
-    by: string;
-    value: string;
-}, set: any): Promise<any>;
-export declare function getUser({ by, value }: {
-    by: string;
-    value: string;
-}): Promise<any>;

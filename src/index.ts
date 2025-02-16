@@ -4,9 +4,8 @@ import {createClient, SupabaseClient} from '@supabase/supabase-js'
 
 export default class VoyageSDK {
     baseURL: string
-    vg: Treaty.Create<Packbase> & {
-        supabase?: SupabaseClient<any, any, any>;
-    }
+    vg: Treaty.Create<Packbase>
+    supabase?: SupabaseClient<any, any, any>
 
     constructor(baseURL: string = 'https://shrew-api.packbase.app', options?: {
         token?: string;
@@ -25,7 +24,7 @@ export default class VoyageSDK {
 
         if (options?.supabase) {
             const {client, key, URL} = options.supabase
-            this.vg.supabase = client || createClient(URL || '', key || '')
+            this.supabase = client || createClient(URL || '', key || '')
         }
     }
 }

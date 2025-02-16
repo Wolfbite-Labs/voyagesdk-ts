@@ -13,7 +13,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     macroFn: {};
 }, {
     index: {
-        get: {
+        post: {
             body: unknown;
             params: {};
             query: unknown;
@@ -21,6 +21,27 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             response: {
                 [x: string]: any;
                 200: any;
+                400: any;
+                404: any;
+                409: any;
+            };
+        };
+    };
+} & {
+    index: {
+        delete: {
+            body: unknown;
+            params: {};
+            query: unknown;
+            headers: unknown;
+            response: {
+                [x: string]: any;
+                200: any;
+                204: any;
+                400: any;
+                401: any;
+                404: any;
+                409: any;
             };
         };
     };
@@ -36,11 +57,3 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }>;
 export default _default;
-export declare function getUserAPI({ by, value, }: {
-    by: string;
-    value: string;
-}, set: any): Promise<any>;
-export declare function getUser({ by, value }: {
-    by: string;
-    value: string;
-}): Promise<any>;
