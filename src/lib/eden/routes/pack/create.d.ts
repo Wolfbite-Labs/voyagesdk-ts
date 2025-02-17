@@ -15,13 +15,9 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     index: {
         post: {
             body: {
-                display_name?: string | undefined;
-                slug?: string | undefined;
-                images?: {
-                    avatar?: any;
-                    header?: any;
-                } | undefined;
-                description?: string | undefined;
+                description: string;
+                display_name: string;
+                slug: string;
             };
             params: {};
             query: unknown;
@@ -29,6 +25,8 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             response: {
                 [x: string]: any;
                 200: any;
+                400: any;
+                403: any;
             };
         };
     };

@@ -21,6 +21,9 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             response: {
                 [x: string]: any;
                 200: any;
+                400: any;
+                404: any;
+                409: any;
             };
         };
     };
@@ -34,6 +37,11 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             response: {
                 [x: string]: any;
                 200: any;
+                204: any;
+                400: any;
+                401: any;
+                404: any;
+                409: any;
             };
         };
     };
@@ -49,24 +57,3 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }>;
 export default _default;
-export declare function Routes(): {
-    method: string;
-    protected: boolean;
-    handler: ({ id, scope }: {
-        id: string;
-        scope?: string;
-    }, set: {
-        status: number;
-    }, currentUser: {
-        sub: string;
-    }) => Promise<void>;
-    schema: {
-        body: import("@sinclair/typebox").TObject<{
-            id: import("@sinclair/typebox").TString;
-        }>;
-        detail: {
-            description: string;
-            tags: string[];
-        };
-    };
-}[];

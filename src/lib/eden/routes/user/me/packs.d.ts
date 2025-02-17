@@ -21,6 +21,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             response: {
                 [x: string]: any;
                 200: any;
+                readonly 500: any;
             };
         };
     };
@@ -36,11 +37,4 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     schema: {};
 }>;
 export default _default;
-export declare function getUserPacks({ user, set }: {
-    user: {
-        sub: string;
-    };
-    set: {
-        status: number;
-    };
-}): Promise<any[] | import("@supabase/postgrest-js").PostgrestError>;
+export declare function getUserPacks({ user, set, error }: any): Promise<any[]>;

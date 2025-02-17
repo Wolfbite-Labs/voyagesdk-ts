@@ -14,19 +14,34 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
 }, {
     index: {
         post: {
-            body: {
-                body: string;
+            body: unknown;
+            params: {
+                username: string;
             };
-            params: {};
             query: unknown;
             headers: unknown;
             response: {
                 [x: string]: any;
                 200: any;
-                201: any;
                 400: any;
                 404: any;
-                500: any;
+            };
+        };
+    };
+} & {
+    index: {
+        delete: {
+            body: unknown;
+            params: {
+                username: string;
+            };
+            query: unknown;
+            headers: unknown;
+            response: {
+                [x: string]: any;
+                200: any;
+                400: any;
+                404: any;
             };
         };
     };

@@ -25,6 +25,8 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
             response: {
                 [x: string]: any;
                 200: any;
+                readonly 404: any;
+                readonly 422: any;
             };
         };
     };
