@@ -42,6 +42,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
                 [x: string]: any;
                 200: any;
                 204: any;
+                400: any;
                 403: any;
                 404: any;
             };
@@ -69,6 +70,8 @@ export declare function getPost(id: string, post?: (Database['public']['Tables']
     tenant_id: string;
     user_id: string;
 } & import("@sinclair/typebox").TObject<{
+    id: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString>;
+    type: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString>;
     username: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString>;
     display_name: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString>;
     about: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TObject<{
@@ -82,6 +85,8 @@ export declare function getPost(id: string, post?: (Database['public']['Tables']
         avatar: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TAny>;
         header: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TAny>;
     }>>;
+    following: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TBoolean>;
+    invite_code: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString>;
 }>) | null>;
 export declare function deletePost({ params: { id }, set, user }: {
     params: {

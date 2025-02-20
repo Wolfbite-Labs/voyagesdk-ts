@@ -29,6 +29,8 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
     index: {
         post: {
             body: {
+                id?: string | undefined;
+                type?: string | undefined;
                 display_name?: string | undefined;
                 slug?: string | undefined;
                 post_privacy?: "everyone" | "followers" | "friends" | "private" | undefined;
@@ -42,7 +44,7 @@ declare const _default: (app: YapockType) => import("elysia").default<"", false,
                     avatar?: any;
                     header?: any;
                 } | undefined;
-            } & {
+                following?: boolean | undefined;
                 invite_code?: string | undefined;
             };
             params: {};
