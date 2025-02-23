@@ -1,4 +1,6 @@
 import { YapockType } from '@/index';
+export declare const PackCache: Map<string, any>;
+export declare const PackMembershipCache: Map<string, any>;
 declare const _default: (app: YapockType) => import("elysia").default<"", false, {
     decorator: {};
     store: {};
